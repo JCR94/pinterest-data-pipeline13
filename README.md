@@ -76,6 +76,12 @@ Pinterest crunches billions of data points every day to decide how to provide mo
     - In order to do so, we had to create a serializer method `json_serial`, as dates stored as a `datetime.datetime`-type were not serializable.
     - We succesfully sent data to the cluster, and we can see it being stored in the S3 bucket.
 
+11. We set up the Databricks account. The Databricks account has already been granted access to the S3 bucket, and the credentials have been uploaded to Databricks as `authentication_credentials.csv`
+
+12. We mounted the S3 bucket to Databricks, and created three dataframes: `df_pin`, `df_geo`, and `df_user`, one for each table.
+
+13. Saved code used on Databricks to file `databricks-scripts.ipynb` notebook.
+
 ## Project description
 
 This project is part of the AICore immersive course in data engineering.
@@ -127,8 +133,11 @@ sqlalchemy
     - EC2
     - IAM
     - MSK
+    - S3
+    - API Gateway
 - Kafka
 - Apache Zookeeper
+- Databricls
 
 ## License Information
 
