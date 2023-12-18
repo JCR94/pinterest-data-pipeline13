@@ -111,7 +111,6 @@ def run_infinite_post_data_loop():
             #print(user_result)
             #print(payload_pin)
             #print(payload_geo)
-            
 
 if __name__ == "__main__":
     run_infinite_post_data_loop()
