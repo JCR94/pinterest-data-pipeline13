@@ -86,6 +86,10 @@ Pinterest crunches billions of data points every day to decide how to provide mo
 
 15. We performed a variety of queries on the dataframes.
 
+16. We created a DAG that performs a simple task, running a notebook. For now, the notebook loads our data from the S3 bucket, cleans it, then performs a variety of queries. We uploaded it to the right S3 bucket (`mwaa-dags-bucket`) and we tested our DAG file (see next point). Later, we may split the notebook into different components, write a task for each such component, and connect them with Xcom variables. How exactly we will divide up the tasks depends on our intentions and will be clearer once the project is finished.
+
+17. We unpaused the task and ran it once manually to test it. The task didn't run successfully on any try at first. After playing around with the code, we realised that we couldn't load our data anymore because we couldn't access our mounted bucket. We unmounted it, updated the credentials, and mounted it back. The data loaded in, and our task now runs as expected on Airflow.
+
 ## Project description
 
 This project is part of the AICore immersive course in data engineering.
