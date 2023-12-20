@@ -82,6 +82,10 @@ Pinterest crunches billions of data points every day to decide how to provide mo
 
 13. Saved code used on Databricks to file `databricks-scripts.ipynb` notebook.
 
+14. We refactored some of the databricks code to store all of the different code in methods that can.
+
+15. We performed a variety of queries on the dataframes.
+
 ## Project description
 
 This project is part of the AICore immersive course in data engineering.
