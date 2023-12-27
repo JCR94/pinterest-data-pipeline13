@@ -106,12 +106,6 @@ def run_infinite_post_data_loop():
             response_user = requests.request("POST", invoke_url_user, headers=headers, data=payload_user)
             print(response_user.status_code)
 
-            #print(pin_result)
-            #print(geo_result)
-            #print(user_result)
-            #print(payload_pin)
-            #print(payload_geo)
-
 if __name__ == "__main__":
     run_infinite_post_data_loop()
     print('Working')

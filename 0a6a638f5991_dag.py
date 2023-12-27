@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 #Define params for Submit Run Operator
 notebook_task = {
-    'notebook_path': '/Users/joelcosta94i@gmail.com/data_cleaning_and_queries',
+    'notebook_path': '/Users/joelcosta94i@gmail.com/queries',
 }
 
 
@@ -31,7 +31,6 @@ with DAG('0a6a638f5991_dag',
     catchup=False,
     default_args=default_args
     ) as dag:
-
 
     opr_submit_run = DatabricksSubmitRunOperator(
         task_id='run_notebook',
